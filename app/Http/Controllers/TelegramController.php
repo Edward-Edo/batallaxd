@@ -9,15 +9,15 @@ class TelegramController extends Controller
 {
     public function index()
     {
-        //$updates = Telegram::getWebhookUpdates();
+        $updates = Telegram::getWebhookUpdates();
         //dd($updates);
-        //$chanelId = $updates[0]['message']['chat']['id'];
+        $chanelId = $updates;
         $text = 'Enviaste un mensaje.';
 
         Telegram::sendMessage([
             'chat_id' => "-512419342",
             'parse_mode' => 'HTML',
-            'text' => $text
+            'text' => $updates
         ]);
     }
 
