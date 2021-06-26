@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\InicioController;
+use App\Http\Controllers\TelegramController;
+//use Telegram;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,5 +15,10 @@ use App\Http\Controllers\InicioController;
 |
 */
 
-Route::get('/', [InicioController::class, 'index']);
-Route::get('/activity', 'TelegramController@updatedActivity');
+Route::get('/', [TelegramController::class, 'index']);
+Route::get('/activity', [TelegramController::class, 'updatedActivity']);
+Route::get('/push_message', [TelegramController::class, 'pushMessage']);
+/*Route::get('/bot/getupdates', function() {
+    $updates = Telegram::getUpdates();
+    return (json_encode($updates));
+});*/
