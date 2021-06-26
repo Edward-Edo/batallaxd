@@ -11,7 +11,7 @@ class TelegramController extends Controller
     {
         $updates = Telegram::getUpdates();
         //dd($updates);
-        $chanelId = $updates[0]['message']['chat']['id'];
+        $chanelId = $updates['message']['chat']['id'];
         $text = 'Enviaste un mensaje.';
 
         Telegram::sendMessage([
