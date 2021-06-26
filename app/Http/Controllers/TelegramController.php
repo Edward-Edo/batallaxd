@@ -15,7 +15,7 @@ class TelegramController extends Controller
                    'chat_id' => "-512419342",
                    'parse_mode' => 'HTML',
                    'text' => "Hola"
-               ])
+            ]);
         }
         /*$updates = Telegram::getWebhookUpdates();
         //dd($updates);
@@ -31,7 +31,7 @@ class TelegramController extends Controller
 
     public function updatedActivity()
     {
-        $activity = Telegram::getWebhookUpdates();
+        $activity = Telegram::getUpdates();
 
         dd($activity);
     }
