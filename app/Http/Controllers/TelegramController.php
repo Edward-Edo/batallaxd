@@ -9,6 +9,9 @@ class TelegramController extends Controller
 {
     public function index()
     {
+        //$updates = Telegram::getWebhookUpdates();
+        //dd($updates);
+
         $text = 'Enviaste un mensaje.';
 
         Telegram::sendMessage([
