@@ -11,7 +11,7 @@ class TelegramController extends Controller
     {
         $updates = Telegram::getWebhookUpdates();
         //dd($updates);
-        $chanelId = $updates[0]['message']['chat']['id']
+        $chanelId = $updates[0]['message']['chat']['id'];
         $text = 'Enviaste un mensaje.';
 
         Telegram::sendMessage([
@@ -42,7 +42,7 @@ class TelegramController extends Controller
         . "$date";
 
         Telegram::sendMessage([
-            'chat_id' => env('TELEGRAM_CHANNEL_ID', '1447158631'),
+            'chat_id' => "-512419342",
             'parse_mode' => 'HTML',
             'text' => $text
         ]);
