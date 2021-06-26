@@ -15,7 +15,7 @@ class TelegramController extends Controller
         $text = 'Enviaste un mensaje.';
 
         Telegram::sendMessage([
-            'chat_id' => $chanelId,
+            'chat_id' => "-512419342",
             'parse_mode' => 'HTML',
             'text' => $text
         ]);
