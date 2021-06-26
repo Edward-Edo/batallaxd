@@ -11,7 +11,8 @@ class InicioController extends Controller
 
     public function index()
     {
-        try {
+        dd("Bienvenido");
+        /*try {
             $update = file_get_contents('php://input');
             $update = json_decode($update, TRUE);
 
@@ -21,15 +22,19 @@ class InicioController extends Controller
 
             $response = "Binvenido";
             $this->sendMessage($chatId, $response);
-            print("FIN");
         } catch (\Exception $e) {
             return "Falló";
-        }
+        }*/
     }
 
     public function sendMessage($chatId, $response)
     {
         $url = $this->website.'/sendMessage?chat_id='.$chatId.'&parse_mode=HTML&text='.urlencode($response);
         file_get_contents($url);
+    }
+
+    public function init_dragones()
+    {
+        return view('dragones.index');
     }
 }

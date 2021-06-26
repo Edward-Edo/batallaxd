@@ -14,3 +14,4 @@ use App\Http\Controllers\InicioController;
 */
 
 Route::get('/', [InicioController::class, 'index']);
+Route::get('/activity', 'TelegramController@updatedActivity');
