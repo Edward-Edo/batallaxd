@@ -15,7 +15,10 @@ use App\Http\Controllers\TelegramController;
 |
 */
 
-Route::get('/', [TelegramController::class, 'index']);
+Route::get('/', function(){
+	return "HOla";
+});
+Route::post('/', [TelegramController::class, 'index']);
 Route::get('/activity', [TelegramController::class, 'updatedActivity']);
 Route::get('/push_message', [TelegramController::class, 'pushMessage']);
 /*Route::get('/bot/getupdates', function() {
